@@ -1,7 +1,8 @@
 class Board:
 
     def __init__(self, player: bool) -> None:
-        pass
+        self.board = [0 for _ in range(9)]
+        self.player = player
 
     def make_move(self, move):
         pass
