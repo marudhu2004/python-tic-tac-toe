@@ -38,7 +38,7 @@ class Board:
         return rows or columns or diagonals
     
     def game_over(self):
-        pass
+        return self.has_winner() or self.list_free_moves() == []
 
     def get_player(self):
         pass
