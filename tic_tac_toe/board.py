@@ -41,10 +41,10 @@ class Board:
         return self.has_winner() or self.list_free_moves() == []
 
     def get_player(self):
-        pass
+        return self.player
 
     def get_board(self):
-        pass
+        return self.board
 
     def make_copy(self):
         pass
