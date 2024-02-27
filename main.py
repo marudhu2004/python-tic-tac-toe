@@ -27,8 +27,8 @@ while True:
 
         # Letting ai play mode if its selected
         if board.player == ai.player:
+            print(f"{'X' if board.player else 'O'} playing a move")
             board.make_move(ai.make_move(board))
-            term.print_board(parse_positions(board))
 
         # Player playing the move
         else:
