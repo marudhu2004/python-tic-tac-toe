@@ -37,7 +37,6 @@ def print_over():
 def print_winner(x):
     print(f"Congrats! {x} is the winner. ")
 
-def play_again():
     again = input("Do you want to play again?")
 
 def game_mode_select():
@@ -50,7 +49,8 @@ def game_mode_select():
         print("Please enter a valid difficulty, not random information. ")
 
     
-    
+    def play_again():
+      again = input("Would you like to play again?")
 
 def first_player_select():
     pass
