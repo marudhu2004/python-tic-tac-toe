@@ -8,7 +8,7 @@ class Board:
         pass
 
     def list_free_moves(self):
-        pass
+        return [x for x in self.board if x == 0]
 
     def has_winner(self):
         pass
