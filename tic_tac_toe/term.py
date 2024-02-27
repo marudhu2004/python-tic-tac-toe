@@ -37,21 +37,29 @@ def print_over():
 def print_winner(x):
     print(f"Congrats! {x} is the winner. ")
 
-
 def game_mode_select():
-    difficulty = input("What difficulty would you like to play on? Beginner or Advanced Mode? : ")
-    if difficulty == "Beginner":
-        print("Welcome to Beginner Mode")
-    elif difficulty == "Advanced":
-        print("So you would like a challenge hmmm....????? Alright, suit yourself. WELCOME TO ADVANCED MODE.")
-    else:
-        print("Please enter a valid difficulty, not random information. ")
+    
+    mode = input("player vs player or player vs computer? (p, c): ")
+    
+    while mode.lower() not in ['c', 'p']:
+        mode = input("player vs player or player vs computer? (p, c): ")
+    
+    return mode
 
+
+def ai_level_select():
+
+    difficulty = input("What difficulty would you like to play on? Beginner or Advanced Mode? (b, a): ")
+    
+    while difficulty.lower() not in ['a', 'b']:
+        difficulty = input("What difficulty would you like to play on? Beginner or Advanced Mode? (b, a): ")
+    
+    return difficulty
     
 def play_again() -> bool:
     
     while True:
-        c = input("Would you like to play again? (Y or N)").lower()
+        c = input("Would you like to play again? (Y or N): ").lower()
         if c in ('y', 'n'):
             return c == 'y'
         else:
