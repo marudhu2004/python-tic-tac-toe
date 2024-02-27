@@ -5,13 +5,13 @@ def help():
           you take turns with the other player trying to outwit each other
           .If the board is full without a winner, consider it a draw""")
     
+
 def banner():
     print("Welcome to Tic Tac Toe.")
     print("[x][o][x]")
     print("[o][x][x]")
     print("[o][o][o]")
     print("Developed by Marudhu2004 and Siddharth Tantri")
-
 
 
 def print_board(x):
@@ -29,13 +29,35 @@ def print_board(x):
 print_board([1,2,3,4,5,6,7,8,9])
 
 
-
-
 def print_over():
     print("The board is full, the game is a draw. Play Again if you want to. ")
-again = input("Do you want to play again?")
+    
 
 
-def print_winner():
-    print(f"Congrats! {} is the winner. ")
-winner_again = input ("Do you want to play again?")
+def print_winner(x):
+    print(f"Congrats! {x} is the winner. ")
+
+def play_again():
+    again = input("Do you want to play again?")
+
+def game_mode_select():
+    difficulty = input("What difficulty would you like to play on? Beginner or Advanced Mode? : ")
+    if difficulty == "Beginner":
+        print("Welcome to Beginner Mode")
+    elif difficulty == "Advanced":
+        print("So you would like a challenge hmmm....????? Alright, suit yourself. WELCOME TO ADVANCED MODE.")
+    else:
+        print("Please enter a valid difficulty, not random information. ")
+
+    
+    
+
+def first_player_select():
+    pass
+
+
+def parse_position():
+    pass
+
+
+game_mode_select()
