@@ -27,3 +27,15 @@ def print_board(x):
 
 
 print_board([1,2,3,4,5,6,7,8,9])
+
+
+
+
+def print_over():
+    print("The board is full, the game is a draw. Play Again if you want to. ")
+again = input("Do you want to play again?")
+
+
+def print_winner():
+    print(f"Congrats! {} is the winner. ")
+winner_again = input ("Do you want to play again?")
