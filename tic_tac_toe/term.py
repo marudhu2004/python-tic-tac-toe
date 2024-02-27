@@ -14,3 +14,16 @@ def banner():
 
 
 
+def print_board(x):
+
+    row_1 = x[0:3]
+    row_2 = x[3:6]
+    row_3 = x[6:9]
+    print()
+    print(f"[ {row_1[0]} ][ {row_1 [1]} ][ {row_1 [2]} ]")
+    print(f"[ {row_2[0]} ][ {row_2 [1]} ][ {row_2 [2]} ]")
+    print(f"[ {row_3[0]} ][ {row_3 [1]} ][ {row_3 [2]} ]")
+    print()
+
+
+print_board([1,2,3,4,5,6,7,8,9])
