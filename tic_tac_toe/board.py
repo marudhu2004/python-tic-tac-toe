@@ -45,6 +45,13 @@ class Board:
 
     def get_board(self):
         return self.board
-
+    
+    def get_winner(self):
+        if not self.game_over():
+            raise errors.GameNotOver
+        return 1 if not self.player else -1
+    
     def make_copy(self):
-        pass
+        board = Board(self.player)
+        board.board = self.board[::]
+        return board
