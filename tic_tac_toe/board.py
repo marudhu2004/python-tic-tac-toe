@@ -11,9 +11,8 @@ class Board:
         if not 0 <= move <= 8 and move not in self.list_free_moves():
             raise errors.IllegalMove
         
-        self.board[move] = 1 if self.player else 2
+        self.board[move] = 1 if self.player else -1
         self.player = not self.player
-        
 
     def list_free_moves(self):
         return [x for x in self.board if x == 0]
