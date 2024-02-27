@@ -47,4 +47,6 @@ class Board:
         return self.board
 
     def make_copy(self):
-        pass
+        board = Board(self.player)
+        board.board = self.board[::]
+        return board
