@@ -1,5 +1,5 @@
 from . import errors
-
+from .util import parse_positions
 
 def help():
     print("If you don't know how to play the game, google it!\n")
@@ -33,26 +33,38 @@ def print_board(x):
 def print_over():
     print("The board is full, the game is a draw. Play Again if you want to. ")
 
+def player_select():
+    player = input("who would you like to play as? (x, o): ").lower()
+    while player not in ('x', 'o'):
+        player = input("who would you like to play as? (x, o): ").lower()
+    return player == 'x'
 
 def print_winner(x):
     print(f"Congrats! {x} is the winner. ")
 
-
 def game_mode_select():
     
-    difficulty = input("What difficulty would you like to play on? Beginner or Advanced Mode? : ")
-    if difficulty == "Beginner":
-        print("Welcome to Beginner Mode")
-    elif difficulty == "Advanced":
-        print("So you would like a challenge hmmm....????? Alright, suit yourself. WELCOME TO ADVANCED MODE.")
-    else:
-        print("Please enter a valid difficulty, not random information. ")
+    mode = input("player vs player or player vs computer? (p, c): ")
+    
+    while mode.lower() not in ['c', 'p']:
+        mode = input("player vs player or player vs computer? (p, c): ")
+    
+    return mode
 
+
+def ai_level_select():
+
+    difficulty = input("What difficulty would you like to play on? Beginner or Advanced Mode? (b, a): ").lower()
+    
+    while difficulty.lower() not in ['a', 'b']:
+        difficulty = input("What difficulty would you like to play on? Beginner or Advanced Mode? (b, a): ").lower()
+    
+    return difficulty
     
 def play_again() -> bool:
     
     while True:
-        c = input("Would you like to play again? (Y or N)").lower()
+        c = input("Would you like to play again? (Y or N): ").lower()
         if c in ('y', 'n'):
             return c == 'y'
         else:
@@ -79,8 +91,12 @@ def first_player_select():
 
 def parse_position(board):
     
+    
     while True:
         try:
+
+            print_board(parse_positions(board))
+            print(f"{'X' if board.get_player() else 'O'}'s turn to play")
             move = int(input("Enter your move: "))
             board.make_move(move - 1)
             break

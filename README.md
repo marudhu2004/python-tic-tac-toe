@@ -1,3 +1,4 @@
-#TIC-TAC_TOE
+#TIC-TAC-TOE
 
-###This is our way of implementing tic tac toe in python with basic ai. Coded mostly by Marudhu2004, assisted by Sidz2007. 
+###This is our version of Tic-Tac-Toe which was implemented using Python and basic AI. Made by Marudhu2004 and assisted by Sidz2007.
+
