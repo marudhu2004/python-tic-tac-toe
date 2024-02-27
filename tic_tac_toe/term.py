@@ -1,3 +1,5 @@
+import errors
+
 def help():
     print("If you don't know how to play the game, google it!")
     print("""there is a 3x3 grid where you face your opponent
@@ -49,7 +51,7 @@ def game_mode_select():
         print("Please enter a valid difficulty, not random information. ")
 
     
-    def play_again():
+def play_again():
       again = input("Would you like to play again?")
 
 def first_player_select():
@@ -62,8 +64,12 @@ def first_player_select():
         print("Please enter a valid player name. ")
 
 
-def parse_position():
-    pass
-
-
-game_mode_select()
+def parse_position(board):
+    
+    while True:
+        try:
+            move = int(input("Enter your move: "))
+            board.make_move(move)
+            break
+        except (errors.IllegalMove, ValueError):
+            print("bad move, try again")
