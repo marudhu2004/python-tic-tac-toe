@@ -7,7 +7,7 @@ class Beginner(AiTemplate):
 
     def __init__(self, player):
         self.player = player
-        self.target = self.__pivot_target()
+        self.target = self.__target(player)
 
     @staticmethod
     def __target(player):
