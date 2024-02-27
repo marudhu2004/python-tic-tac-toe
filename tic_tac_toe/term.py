@@ -33,6 +33,11 @@ def print_board(x):
 def print_over():
     print("The board is full, the game is a draw. Play Again if you want to. ")
 
+def player_select():
+    player = input("who would you like to play as? (x, o): ").lower()
+    while player not in ('x', 'o'):
+        player = input("who would you like to play as? (x, o): ").lower()
+    return player == 'x'
 
 def print_winner(x):
     print(f"Congrats! {x} is the winner. ")
@@ -49,10 +54,10 @@ def game_mode_select():
 
 def ai_level_select():
 
-    difficulty = input("What difficulty would you like to play on? Beginner or Advanced Mode? (b, a): ")
+    difficulty = input("What difficulty would you like to play on? Beginner or Advanced Mode? (b, a): ").lower()
     
     while difficulty.lower() not in ['a', 'b']:
-        difficulty = input("What difficulty would you like to play on? Beginner or Advanced Mode? (b, a): ")
+        difficulty = input("What difficulty would you like to play on? Beginner or Advanced Mode? (b, a): ").lower()
     
     return difficulty
     
