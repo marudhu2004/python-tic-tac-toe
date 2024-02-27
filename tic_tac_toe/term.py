@@ -53,7 +53,13 @@ def game_mode_select():
     
 
 def first_player_select():
-    pass
+    user_input = input("Who would like to go first? x or y? :  ")
+    if user_input == "x":
+        print("X goes first! make the first move!: ")
+    elif user_input ==  "y":
+        print ("Y goes first! make the first move!: ")
+    else:
+        print("Please enter a valid player name. ")
 
 
 def parse_position():
