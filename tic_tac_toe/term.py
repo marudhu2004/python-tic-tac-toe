@@ -1,19 +1,21 @@
-import errors
+from . import errors
+
 
 def help():
-    print("If you don't know how to play the game, google it!")
-    print("""there is a 3x3 grid where you face your opponent
-          and try and get 3 x or o on the same row, column or diagonal
-          you take turns with the other player trying to outwit each other
-          .If the board is full without a winner, consider it a draw""")
+    print("If you don't know how to play the game, google it!\n")
+    print("""   there is a 3x3 grid where you face your opponent
+    and try and get 3 x or o on the same row, column or diagonal
+    you take turns with the other player trying to outwit each other.
+    If the board is full without a winner, consider it a draw""")
+    input()
     
 
 def banner():
-    print("Welcome to Tic Tac Toe.")
+    print("\nWelcome to Tic Tac Toe.\n")
     print("[x][o][x]")
     print("[o][x][x]")
-    print("[o][o][o]")
-    print("Developed by Marudhu2004 and Siddharth Tantri")
+    print("[o][o][o]\n")
+    print("Developed by Marudhu2004 and Siddharth Tantri\n")
 
 
 def print_board(x):
@@ -28,18 +30,13 @@ def print_board(x):
     print()
 
 
-print_board([1,2,3,4,5,6,7,8,9])
-
-
 def print_over():
     print("The board is full, the game is a draw. Play Again if you want to. ")
-    
 
 
 def print_winner(x):
     print(f"Congrats! {x} is the winner. ")
 
-    again = input("Do you want to play again?")
 
 def game_mode_select():
     
@@ -52,17 +49,32 @@ def game_mode_select():
         print("Please enter a valid difficulty, not random information. ")
 
     
-def play_again():
-      again = input("Would you like to play again?")
+def play_again() -> bool:
+    
+    while True:
+        c = input("Would you like to play again? (Y or N)").lower()
+        if c in ('y', 'n'):
+            return c == 'y'
+        else:
+            print("enter valid input!")
+        
+
 
 def first_player_select():
-    user_input = input("Who would like to go first? x or y? :  ")
-    if user_input == "x":
-        print("X goes first! make the first move!: ")
-    elif user_input ==  "y":
-        print ("Y goes first! make the first move!: ")
-    else:
-        print("Please enter a valid player name. ")
+    
+    while True:
+        user_input = input("Who would like to go first? x or o? :  ").lower()
+        
+        if user_input == "x":
+            print("X goes first!")
+            return True
+        
+        elif user_input == "o":
+            print ("O goes first!")
+            return False
+        
+        else:
+            print("Please enter a valid player (x or o).")
 
 
 def parse_position(board):
@@ -70,7 +82,7 @@ def parse_position(board):
     while True:
         try:
             move = int(input("Enter your move: "))
-            board.make_move(move)
+            board.make_move(move - 1)
             break
         except (errors.IllegalMove, ValueError):
             print("bad move, try again")
