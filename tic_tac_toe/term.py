@@ -1,5 +1,5 @@
 from . import errors
-
+from .util import parse_positions
 
 def help():
     print("If you don't know how to play the game, google it!\n")
@@ -78,8 +78,12 @@ def first_player_select():
 
 def parse_position(board):
     
+    
     while True:
         try:
+
+            print_board(parse_positions(board))
+            print(f"{'X' if board.get_player() else 'O'}'s turn to play")
             move = int(input("Enter your move: "))
             board.make_move(move - 1)
             break
