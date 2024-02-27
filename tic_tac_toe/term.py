@@ -42,6 +42,7 @@ def print_winner(x):
     again = input("Do you want to play again?")
 
 def game_mode_select():
+    
     difficulty = input("What difficulty would you like to play on? Beginner or Advanced Mode? : ")
     if difficulty == "Beginner":
         print("Welcome to Beginner Mode")
