@@ -5,3 +5,10 @@ def help():
           you take turns with the other player trying to outwit each other
           .If the board is full without a winner, consider it a draw""")
     
+def banner():
+    print("Welcome to Tic Tac Toe.")
+    print("[x][o][x]")
+    print("[o][x][x]")
+    print("[o][o][o]")
+    print("Developed by Marudhu2004 and Sidz2007.")
+     
