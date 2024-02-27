@@ -35,7 +35,7 @@ class Beginner(AiTemplate):
             next_board.make_move(move)
 
             if next_board.has_winner():
-                if next_board.get_winner() == self.target:
+                if next_board.get_winner() == target:
                     return move
             
         # Return a random move if none of the above 
