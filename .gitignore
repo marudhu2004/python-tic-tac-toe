@@ -2,4 +2,5 @@ env
 __pycache__
 build
 tic_tac_toe.*
+marudhu2004_tic_tac_toe.*
 dist

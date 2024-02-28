@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 packages = ["tic_tac_toe", "game_ai"]
 
 [project]
-name = "tic-tac-toe"
+name = "marudhu2004-tic-tac-toe"
 authors = [
     {name = "marudhu2004", email = "marudhupaandian@gmail.com"},
     {name = "sidz2004", email = "igauthamsiddharthtantri@gmail.com"},
@@ -22,3 +22,7 @@ license = {text = "BSD-3-Clause"}
 
 [project.scripts]
 tic-tac-toe = "tic_tac_toe.main:run"
+
+[project.urls]
+Homepage = "https://github.com/marudhu2004/python-tic-tac-toe"
+Issues = "https://github.com/marudhu2004/python-tic-tac-toe"
