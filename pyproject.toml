@@ -14,7 +14,7 @@ authors = [
 
 description = "A simple terminal tictactoe game"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.7"
 version = "0.7"
 
 license = {text = "BSD-3-Clause"}
