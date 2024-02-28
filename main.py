@@ -3,6 +3,7 @@ from tic_tac_toe.board import Board
 from tic_tac_toe.util import *
 
 from game_ai.beginner import Beginner
+from game_ai.advanced import Advanced
 
 while True:
     
@@ -17,7 +18,10 @@ while True:
     if mode == 'c':
         level = term.ai_level_select()
         ai_player = not term.player_select()
-        ai = Beginner(ai_player)
+        if level == 'b':
+            ai = Beginner(ai_player)
+        else:
+            ai = Advanced(ai_player)
         
     player = term.first_player_select()
     board = Board(player)
@@ -26,7 +30,7 @@ while True:
     while True:
 
         # Letting ai play mode if its selected
-        if board.player == ai.player:
+        if mode == 'c' and board.player == ai.player:
             print(f"{'X' if board.player else 'O'} playing a move")
             board.make_move(ai.make_move(board))
 
