@@ -15,7 +15,7 @@ def banner():
     print("[x][o][x]")
     print("[o][x][x]")
     print("[o][o][o]\n")
-    print("Developed by Marudhu2004 and Siddharth Tantri\n")
+    print("Developed by Marudhu2004 and assisted by Sidz2007.\n")
 
 
 def print_board(x):
