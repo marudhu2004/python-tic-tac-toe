@@ -32,6 +32,7 @@ def run():
 
             # Letting ai play mode if its selected
             if mode == 'c' and board.player == ai.player:
+                term.print_board(parse_positions(board))
                 print(f"{'X' if board.player else 'O'} playing a move")
                 board.make_move(ai.make_move(board))
 
