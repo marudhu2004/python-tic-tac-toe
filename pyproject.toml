@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["tic_tac_toe", "game_ai"]
+
+[project]
+name = "tic-tac-toe"
+authors = [
+    {name = "marudhu2004", email = "marudhupaandian@gmail.com"},
+]
+
+
+description = "A simple terminal tictactoe game"
+readme = "README.md"
+requires-python = ">=3.8"
+version = "0.7"
+
+license = {text = "BSD-3-Clause"}
+
+[project.scripts]
+tic-tac-toe = "tic_tac_toe.main:run"
