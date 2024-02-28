@@ -9,6 +9,7 @@ packages = ["tic_tac_toe", "game_ai"]
 name = "tic-tac-toe"
 authors = [
     {name = "marudhu2004", email = "marudhupaandian@gmail.com"},
+    {name = "sidz2004", email = "igauthamsiddharthtantri@gmail.com"},
 ]
 
 
