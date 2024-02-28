@@ -1,5 +1,5 @@
 from tic_tac_toe.board import Board
-from tic_tac_toe.ai.template import AiTemplate
+from tic_tac_toe.ai import AiTemplate
 
 import random
 
