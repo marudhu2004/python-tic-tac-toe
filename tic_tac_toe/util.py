@@ -11,7 +11,7 @@ def parse_positions(board: Board):
         if pos == 1:
             positions.append("x")
         elif pos == 0:
-            positions.append("")
+            positions.append(" ")
         elif pos == -1:
             positions.append("o")    
     
